@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.example.u4_ejer2_activity.LoginDestinoActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Te has logeado con los siguientes datos:"
+        android:textColor="@color/colorBlack"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/LtvUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/LtvPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnInicioLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INICIO"
+        android:onClick="btnInicioLogin"/>
+</LinearLayout>
