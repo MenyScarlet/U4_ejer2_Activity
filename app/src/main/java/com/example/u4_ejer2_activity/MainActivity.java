@@ -13,16 +13,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void btnFormulario (View view){
+    public void clickFormulario (View view){
 
-        Intent i=new Intent(getApplicationContext(),FormularioActivity.class);
+        Intent i=new Intent(getApplicationContext(),
+                FormularioActivity.class);
         startActivity(i);
 
     }
 
-    public void btnLogin (View view){
+    public void clickLogin (View view){
 
-        Intent i=new Intent(getApplicationContext(),LoginActivity.class);
+        Intent i=new Intent(getApplicationContext(),
+                LoginActivity.class);
         startActivity(i);
 
     }

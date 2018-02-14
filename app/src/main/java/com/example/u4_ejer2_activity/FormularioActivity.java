@@ -1,5 +1,6 @@
 package com.example.u4_ejer2_activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,10 @@ import android.widget.Toast;
 
 public class FormularioActivity extends AppCompatActivity {
 
+    static final String EXTRA_EMAIL="EMAIL";
+    static final String EXTRA_PASS1="PASS1";
+    static final String EXTRA_PASS2="PASS2";
+    static final String EXTRA_USUARIO="USUSARIO";
     EditText FetEmail, FetPassword1, FetPassword2, FetUsuario;
 
     @Override
@@ -19,6 +24,8 @@ public class FormularioActivity extends AppCompatActivity {
         FetPassword1 = (EditText)findViewById(R.id.FetPass1);
         FetPassword2 = (EditText)findViewById(R.id.FetPass2);
         FetUsuario = (EditText)findViewById(R.id.FetUsuario);
+
+
 
     }//FIN onCreate
 
@@ -37,6 +44,14 @@ public class FormularioActivity extends AppCompatActivity {
         }else{
 
             if (pass1.equals(pass2)){
+
+                Intent i = new Intent(getApplicationContext(),
+                        FormularioDestinoActivity.class);
+                i.putExtra(EXTRA_EMAIL, email);
+                i.putExtra(EXTRA_PASS2, pass2);
+                i.putExtra(EXTRA_USUARIO, usuario);
+
+                startActivity(i);
 
 
             }else{
